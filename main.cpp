@@ -15,7 +15,7 @@
 using namespace std;
 using json::JSON;
 
-bool debug = true;
+bool debug = false;
 string configFileName = "config.json";
 string statsFileName = "stats.json";
 bool statsEnabled = true;
