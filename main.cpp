@@ -210,7 +210,13 @@ int main() {
         }
         cout << "Starting (" << totalWordsNumber << " words are going to be created)";
 
-        if(outputEnabled) { mkdir(outputDirectory.c_str()); }
+        if(outputEnabled) {
+            #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
+                mkdir(outputDirectory.c_str());
+            #else
+                mkdir(outputDirectory.c_str(), 0777);
+            #endif
+        }
         timeBeforeRunning = getTimestamp();
         iterateOverCharacters(0);
         timeAfterRunning = getTimestamp();

@@ -2,11 +2,12 @@
 
 A simple dictionary generator in C++. The goal was to make an efficient algorythm that can create a list of all possibilities from a dictionary. It also easy to compile (C++ 11) and it simply use [SimpleJSON](https://github.com/nbsdx/SimpleJSON) (header-only library).
 
-For example :
+### Example
 A dictionary composed of {"A", "B", "C"} and the maximum word length set to 2 will give ->
 {"A", "AA", "AB", "AC", "B", "BA", "BB", "BC", "C", "CA", "CB", "CC"}.
 
-Configuration file :
+### Configuration file
+Run the program in order to create config.json in it's folder.
 ```json
 {
   "dictionary" : ["A", "B", "C"],
@@ -22,6 +23,6 @@ Configuration file :
 }
 ```
 
-To do :
+### To do
 - Speed improvements (use all cores, code)
 - Allow start at different positions (range system)
