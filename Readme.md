@@ -1,12 +1,10 @@
-##dictionaryAlgorithm
+##dictionaryFinder
 
-A simple dictionary generator in C++. The goal was to make an efficient algorythm that can create a list of all possibilities from a dictionary. It also easy to compile (C++ 11) and it simply use [SimpleJSON](https://github.com/nbsdx/SimpleJSON) (header-only library).
-
-### Example
-A dictionary composed of {"A", "B", "C"} and the maximum word length set to 2 will give ->
+A simple dictionary generator in C++. The aim was to make an efficient algorithm that can create a list of all possibilities from a dictionary. It's easy to compile (C++11) and it simply use one (header-only) library : [SimpleJSON](https://github.com/nbsdx/SimpleJSON).  
+For example : A dictionary composed of {"A", "B", "C"} and wordsLength set to 2 will give :
 {"A", "AA", "AB", "AC", "B", "BA", "BB", "BC", "C", "CA", "CB", "CC"}.
 
-### Configuration file
+### Configuration
 Run the program in order to create config.json in it's folder.
 ```json
 {
@@ -23,6 +21,7 @@ Run the program in order to create config.json in it's folder.
 }
 ```
 
-### To do
-- Speed improvements (use all cores, code)
+### Current work
+- Speed improvements (use all cores, improve code)
 - Allow start at different positions (range system)
+- More settings (on words length, priority system)
