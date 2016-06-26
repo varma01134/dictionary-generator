@@ -4,7 +4,8 @@ A simple dictionary generator in C++. The aim was to make an efficient algorithm
 For example : A dictionary composed of {"A", "B", "C"} and wordsLength set to 2 will give :
 {"A", "AA", "AB", "AC", "B", "BA", "BB", "BC", "C", "CA", "CB", "CC"}.
 
-### Configuration
+###Configuration
+
 Run the program in order to create config.json in it's folder.
 ```json
 {
@@ -21,7 +22,12 @@ Run the program in order to create config.json in it's folder.
 }
 ```
 
-### Current work
+###Current work
+
 - Speed improvements (use all cores, improve code)
 - Allow start at different positions (range system)
 - More settings (on words length, priority system)
+
+###Contribute
+
+Don't hesitate to improve the code and ask for a pull request, even small ones. I would be delighted to see other people taking part in this project :-).
