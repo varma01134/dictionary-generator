@@ -1,2 +1,10 @@
-.idea/
-CMakeLists.txt
+config.json
+stats.json
+.vs/
+x64/
+Debug/
+*.sln
+*.VC.db
+*.VC.opendb
+*.vcxproj
+*.vcxproj.filters

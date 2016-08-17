@@ -1,8 +1,8 @@
 /*
- * Name    : dictionaryAlgorithm
+ * Name    : dictionaryFinder
  * Version : 1.0.0
  * Author  : thdoteo
- * URL     : https://github.com/thdoteo/dictionaryalgorithm
+ * URL     : https://github.com/thdoteo/dictionaryFinder
  */
 
 #include <iostream>
@@ -10,12 +10,12 @@
 #include <chrono>
 #include <fstream>
 #include <sys/stat.h>
+#include <direct.h>
 #include "json.hpp"
 
 using namespace std;
 using json::JSON;
 
-bool debug = false;
 string configFileName = "config.json";
 string statsFileName = "stats.json";
 bool statsEnabled = true;
@@ -39,11 +39,9 @@ string secretWordResult = "";
 string word = "";
 
 int stop() {
-    if(debug) {
-        cout << endl << "Press any key to continue...";
-        cin.ignore();
-        exit(0);
-    }
+    cout << "\n";
+    cin.ignore();
+	exit(0);
 }
 
 long long int getTimestamp() {
@@ -212,7 +210,11 @@ int main() {
 
         if(outputEnabled) {
             #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
-                mkdir(outputDirectory.c_str());
+				#if defined(_MSC_VER)
+					_mkdir(outputDirectory.c_str());
+				#else
+					mkdir(outputDirectory.c_str());
+				#endif
             #else
                 mkdir(outputDirectory.c_str(), 0777);
             #endif
