@@ -1,8 +1,6 @@
 # dictionary-generator
 
-A simple dictionary generator in C++ with the aim of making it very efficient.  
-For example : A dictionary composed of {"A", "B", "C"} and wordsLength set to 2 will give:
-{"A", "AA", "AB", "AC", "B", "BA", "BB", "BC", "C", "CA", "CB", "CC"}.
+A simple dictionary generator in C++ with the aim of making it very efficient. For example, the dictionary composed of letters `{"A", "B", "C"}` and the parameter `wordsLength` set to 2, will return: `{"A", "AA", "AB", "AC", "B", "BA", "BB", "BC", "C", "CA", "CB", "CC"}`.
 
 ## Configuration
 
