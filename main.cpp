@@ -1,9 +1,3 @@
-/*
- * Name    : dictionaryFinder
- * Version : 1.0.0
- * Author  : thdoteo
- * URL     : https://github.com/thdoteo/dictionaryFinder
- */
 
 #include <iostream>
 #include <vector>
